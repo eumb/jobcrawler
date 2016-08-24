@@ -1,0 +1,12 @@
+<template name="NewJob">
+	<div class="new-recipe-container">
+		{{#autoForm collection="Jobs" id="insertJobForm" type="insert" class="new-recipe-form"}}
+			<fieldset>
+		      <legend>Add a Job</legend>
+		      {{> afQuickField name='name'}}
+		      {{> afQuickField name='description' rows=6}}
+		    </fieldset>
+		    <button type="submit" class="btn btn-primary">Insert</button>
+	  	{{/autoForm}}
+</div>
+</template>

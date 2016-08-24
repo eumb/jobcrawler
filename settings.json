@@ -1,0 +1,11 @@
+{
+
+  "public":{
+  	"ga":{
+  		"account":"UA-81725565-1"
+  	}
+  },
+  "private":{
+    "hello":"This is private"
+  }
+}
