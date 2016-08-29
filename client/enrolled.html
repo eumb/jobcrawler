@@ -1,0 +1,30 @@
+<template name="enrolledList">
+	
+	<h1> Enrolled jobs</h1>
+	
+	{{#each enrolledJobs}}
+	
+
+	
+	
+	<article class="{{#if isApplyed}} red{{/if}}">
+		<h3>
+			{{name}}
+		</h3>
+		<p>{{description}}</p>
+		<p>
+		Categories:
+		{{#each categories}}
+			<span>{{name}}</span>,
+		{{/each}}
+		</p>
+	
+	
+		<button	class="ui negative basic button toggleisApplied"> Cancel Job </button>
+		
+	</article>
+	
+	
+{{/each}}
+	
+</template>

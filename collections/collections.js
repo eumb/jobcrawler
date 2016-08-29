@@ -1,7 +1,14 @@
 Jobs= new Mongo.Collection('jobs');
 
+
+
+
 Jobs.allow({
 	insert:function(userId,doc){
+		return !!userId;   //you are allowed if it is = to userId
+		//like when signed in
+	},
+	update:function(userId,doc){
 		return !!userId;   //you are allowed if it is = to userId
 		//like when signed in
 	}
@@ -37,6 +44,14 @@ JobSchema = new SimpleSchema({
       type:"hidden"
     }
   },
+   isApplyed:{
+    type:Boolean,
+    defaultValue:false,
+    optional:true,
+    autoform:{
+      type:"hidden"
+    }
+  },
 	author:{
 		type:String,
 		label:"Author",
@@ -59,8 +74,29 @@ JobSchema = new SimpleSchema({
 		}
 
 
-	}
+	},
+	
+	purchasedBy:{
+		type:String,
+		label:"purchasedBy",
+		defaultValue:"",
+		autoform:{
+			type:"hidden"
+		}
 
+	},
 });
+
+Meteor.methods({
+	toggleJobApplyedStatus:function(id, currentState){
+		Jobs.update(id,{
+				$set:{
+					isApplyed:!currentState,
+					purchasedBy:Meteor.userId()
+				}
+			});
+	}
+});
+
 
 Jobs.attachSchema(JobSchema);

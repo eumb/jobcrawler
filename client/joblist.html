@@ -1,0 +1,39 @@
+<template name="JobList">
+	<div class="ui segment">
+	{{#if Template.subscriptionsReady}}
+		{{#each jobs}}
+			<article class="ui card">
+				
+				
+						<h3>
+							{{name}}
+						</h3>
+						<p>{{description}}</p>
+						<p>
+							Categories:
+							{{#each categories}}
+								<span>{{name}}</span>,
+							{{/each}}
+						</p>
+						<a href="/jobDetails/{{_id}}">View Details</a>
+				
+						
+						
+					 
+						
+							<button	class="ui primary basic button toggleisApplied">Apply to this job </button>
+					
+			 	
+			</article>
+			
+			{{else}}
+			
+				<h3>You have no enrolled jobs</h3>
+			
+	  	{{/each}}
+	{{else}}
+		<p>Loading</p>
+	{{/if}}
+</div>
+
+</template>

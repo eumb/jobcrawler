@@ -1,0 +1,26 @@
+<template name="masterLayout">
+	
+   {{> Template.dynamic template=nav}}
+
+    
+    	<div class= "ui two column grid">
+        <div class="column">
+           <div class="ui vertical fluid tabular menu">
+            {{> Template.dynamic template=sidebar}}
+
+           </div>  
+        </div>
+        <div class="column">
+             <div>
+             {{> Template.dynamic template=main}}
+            </div>
+        </div> 
+            
+      	</div>
+        
+        <div>
+        {{> Template.dynamic template=footer}}
+        </div>  
+      
+    
+</template>
