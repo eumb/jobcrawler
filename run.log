@@ -1,3 +1,155 @@
 [[[[[ /var/www/webapps/jobcrawler ]]]]]
 
 => Started proxy.
+[34mI20160829-15:07:58.174(3)? [39mundefined
+=> Started your app.
+
+=> App running at: http://localhost:3001/
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)
+=> Server modified -- restarting...                                   [34mI20160829-15:14:06.853(3)? [39mundefined
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mI20160829-15:16:33.344(3)? [39mundefined
+=> Meteor server restarted
+=> Client modified -- refreshing
+=> Server modified -- restarting...                                   [34mI20160829-15:20:06.609(3)? [39mundefined
+=> Meteor server restarted
+=> Server modified -- restarting...                                   [34mI20160829-15:22:39.592(3)? [39mundefined
+=> Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)
+=> Server modified -- restarting...                                   [34mI20160829-15:37:54.599(3)? [39mundefined
+=> Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)=> Client modified -- refreshing (x5)=> Client modified -- refreshing (x6)=> Client modified -- refreshing (x7)
+=> Server modified -- restarting...                                   => Errors prevented startup:
+   
+   While loading package fourseven:scss@3.2.0:
+   error: Command failed:
+   /root/.meteor/packages/meteor-tool/.1.4.1_1.7xcyrz++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/bin/npm
+   rebuild --no-bin-links --update-binary
+   Cannot download
+   "https://github.com/sass/node-sass/releases/download/v3.2.0/linux-x64-46_binding.node":
+   HTTP error 404 Not Found
+   gyp: /root/.node-gyp/4.5.0/common.gypi not found (cwd:
+   /root/.meteor/packages/fourseven_scss/.3.2.0.1h9e6o2++os.linux.x86_64+web.browser+web.cordova/plugin.compileScss.os.linux.x86_64/npm/node_modules/meteor/compileScss/compileScss/node_modules/.temp-1jq47c8/node_modules/node-sass)
+   while reading includes of binding.gyp while trying to load binding.gyp
+   gyp ERR! configure error 
+   gyp ERR! stack Error: `gyp` failed with exit code: 1
+   gyp ERR! stack     at ChildProcess.onCpExit
+   (/root/.meteor/packages/fourseven_scss/.3.2.0.1h9e6o2++os.linux.x86_64+web.browser+web.cordova/plugin.compileScss.os.linux.x86_64/npm/node_modules/meteor/compileScss/compileScss/node_modules/node-sass/node_modules/pangyp/lib/configure.js:345:16)
+   gyp ERR! stack     at emitTwo (events.js:87:13)
+   gyp ERR! stack     at ChildProcess.emit (events.js:172:7)
+   gyp ERR! stack     at Process.ChildProcess._handle.onexit
+   (internal/child_process.js:200:12)
+   gyp ERR! System Linux 4.4.0-34-generic
+   gyp ERR! command
+   "/root/.meteor/packages/meteor-tool/.1.4.1_1.7xcyrz++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/bin/node"
+   "/root/.meteor/packages/fourseven_scss/.3.2.0.1h9e6o2++os.linux.x86_64+web.browser+web.cordova/plugin.compileScss.os.linux.x86_64/npm/node_modules/meteor/compileScss/compileScss/node_modules/.temp-1jq47c8/node_modules/node-sass/node_modules/pangyp/bin/node-gyp"
+   "rebuild" "--libsass_ext=" "--libsass_cflags=" "--libsass_ldflags="
+   "--libsass_library="
+   gyp ERR! cwd
+   /root/.meteor/packages/fourseven_scss/.3.2.0.1h9e6o2++os.linux.x86_64+web.browser+web.cordova/plugin.compileScss.os.linux.x86_64/npm/node_modules/meteor/compileScss/compileScss/node_modules/.temp-1jq47c8/node_modules/node-sass
+   gyp ERR! node -v v4.5.0
+   gyp ERR! pangyp -v v2.2.1
+   gyp ERR! not ok 
+   Build failed
+   
+   npm ERR! Linux 4.4.0-34-generic
+   npm ERR! argv
+   "/root/.meteor/packages/meteor-tool/.1.4.1_1.7xcyrz++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/bin/node"
+   "/root/.meteor/packages/meteor-tool/.1.4.1_1.7xcyrz++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/bin/npm"
+   "rebuild" "--no-bin-links" "--update-binary"
+   npm ERR! node v4.5.0
+   npm ERR! npm  v3.10.6
+   npm ERR! code ELIFECYCLE
+   npm ERR! node-sass@3.2.0 postinstall: `node scripts/build.js`
+   npm ERR! Exit status 1
+   npm ERR! 
+   npm ERR! Failed at the node-sass@3.2.0 postinstall script 'node
+   scripts/build.js'.
+   npm ERR! Make sure you have the latest version of node.js and npm installed.
+   npm ERR! If you do, this is most likely a problem with the node-sass
+   package,
+   npm ERR! not with npm itself.
+   npm ERR! Tell the author that this fails on your system:
+   npm ERR!     node scripts/build.js
+   npm ERR! You can get information on how to open an issue for this project
+   with:
+   npm ERR!     npm bugs node-sass
+   npm ERR! Or if that isn't available, you can get their info via:
+   npm ERR!     npm owner ls node-sass
+   npm ERR! There is likely additional logging output above.
+   
+   npm ERR! Please include the following file with any support request:
+   npm ERR!
+   /root/.meteor/packages/fourseven_scss/.3.2.0.1h9e6o2++os.linux.x86_64+web.browser+web.cordova/plugin.compileScss.os.linux.x86_64/npm/node_modules/meteor/compileScss/compileScss/node_modules/.temp-1jq47c8/npm-debug.log
+   Cannot download
+   "https://github.com/sass/node-sass/releases/download/v3.2.0/linux-x64-46_binding.node":
+   HTTP error 404 Not Found
+   gyp: /root/.node-gyp/4.5.0/common.gypi not found (cwd:
+   /root/.meteor/packages/fourseven_scss/.3.2.0.1h9e6o2++os.linux.x86_64+web.browser+web.cordova/plugin.compileScss.os.linux.x86_64/npm/node_modules/meteor/compileScss/compileScss/node_modules/.temp-1jq47c8/node_modules/node-sass)
+   while reading includes of binding.gyp while trying to load binding.gyp
+   gyp ERR! configure error 
+   gyp ERR! stack Error: `gyp` failed with exit code: 1
+   gyp ERR! stack     at ChildProcess.onCpExit
+   (/root/.meteor/packages/fourseven_scss/.3.2.0.1h9e6o2++os.linux.x86_64+web.browser+web.cordova/plugin.compileScss.os.linux.x86_64/npm/node_modules/meteor/compileScss/compileScss/node_modules/node-sass/node_modules/pangyp/lib/configure.js:345:16)
+   gyp ERR! stack     at emitTwo (events.js:87:13)
+   gyp ERR! stack     at ChildProcess.emit (events.js:172:7)
+   gyp ERR! stack     at Process.ChildProcess._handle.onexit
+   (internal/child_process.js:200:12)
+   gyp ERR! System Linux 4.4.0-34-generic
+   gyp ERR! command
+   "/root/.meteor/packages/meteor-tool/.1.4.1_1.7xcyrz++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/bin/node"
+   "/root/.meteor/packages/fourseven_scss/.3.2.0.1h9e6o2++os.linux.x86_64+web.browser+web.cordova/plugin.compileScss.os.linux.x86_64/npm/node_modules/meteor/compileScss/compileScss/node_modules/.temp-1jq47c8/node_modules/node-sass/node_modules/pangyp/bin/node-gyp"
+   "rebuild" "--libsass_ext=" "--libsass_cflags=" "--libsass_ldflags="
+   "--libsass_library="
+   gyp ERR! cwd
+   /root/.meteor/packages/fourseven_scss/.3.2.0.1h9e6o2++os.linux.x86_64+web.browser+web.cordova/plugin.compileScss.os.linux.x86_64/npm/node_modules/meteor/compileScss/compileScss/node_modules/.temp-1jq47c8/node_modules/node-sass
+   gyp ERR! node -v v4.5.0
+   gyp ERR! pangyp -v v2.2.1
+   gyp ERR! not ok 
+   Build failed
+   
+   npm ERR! Linux 4.4.0-34-generic
+   npm ERR! argv
+   "/root/.meteor/packages/meteor-tool/.1.4.1_1.7xcyrz++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/bin/node"
+   "/root/.meteor/packages/meteor-tool/.1.4.1_1.7xcyrz++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/bin/npm"
+   "rebuild" "--no-bin-links" "--update-binary"
+   npm ERR! node v4.5.0
+   npm ERR! npm  v3.10.6
+   npm ERR! code ELIFECYCLE
+   npm ERR! node-sass@3.2.0 postinstall: `node scripts/build.js`
+   npm ERR! Exit status 1
+   npm ERR! 
+   npm ERR! Failed at the node-sass@3.2.0 postinstall script 'node
+   scripts/build.js'.
+   npm ERR! Make sure you have the latest version of node.js and npm installed.
+   npm ERR! If you do, this is most likely a problem with the node-sass
+   package,
+   npm ERR! not with npm itself.
+   npm ERR! Tell the author that this fails on your system:
+   npm ERR!     node scripts/build.js
+   npm ERR! You can get information on how to open an issue for this project
+   with:
+   npm ERR!     npm bugs node-sass
+   npm ERR! Or if that isn't available, you can get their info via:
+   npm ERR!     npm owner ls node-sass
+   npm ERR! There is likely additional logging output above.
+   
+   npm ERR! Please include the following file with any support request:
+   npm ERR!
+   /root/.meteor/packages/fourseven_scss/.3.2.0.1h9e6o2++os.linux.x86_64+web.browser+web.cordova/plugin.compileScss.os.linux.x86_64/npm/node_modules/meteor/compileScss/compileScss/node_modules/.temp-1jq47c8/npm-debug.log
+   
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+[34mI20160829-16:10:57.192(3)? [39mundefined
+=> Meteor server restarted
+=> Client modified -- refreshing
+=> Server modified -- restarting...
+Changes to your project's package version selections:
+
+fourseven:scss           removed from your project
+materialize:materialize  removed from your project
+
+                                   [34mI20160829-16:16:40.291(3)? [39mundefined
+=> Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)=> Client modified -- refreshing (x5)

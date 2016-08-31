@@ -1,7 +1,5 @@
 Jobs= new Mongo.Collection('jobs');
-
-
-
+Schemas = {};
 
 Jobs.allow({
 	insert:function(userId,doc){
@@ -22,20 +20,33 @@ Category = new SimpleSchema({
 
 });
 
-JobSchema = new SimpleSchema({
+Schemas.detailsInformation = new SimpleSchema({
 
 	name:{
 		type:String,
-		label: "Name"
+		label: "Give your job a name"
 	},
 	description:{
 		type: String,
-		label:"Description"
+		label:"Describe what you need"
 	},
-  categories:{
+/*  categories:{
     type:[Category],
     label:"Category"
-  },
+  },*/
+   
+	urgency:{
+		type: String,
+		label:"When would you like the job to start?",
+		autoform:{
+			options:[
+			   	{label: "Urgently", value: "Urgently"},
+        		{label: "Flexible start date", value: "Flexible start date"},
+        		{label: "Within 2 days", value: "Within 2 days"}
+			]
+		}
+	},
+
   isCommited:{
     type:Boolean,
     defaultValue:false,
@@ -79,13 +90,35 @@ JobSchema = new SimpleSchema({
 	purchasedBy:{
 		type:String,
 		label:"purchasedBy",
-		defaultValue:"",
+		defaultValue:"available",
 		autoform:{
 			type:"hidden"
 		}
 
 	},
 });
+
+
+Schemas.contactInformation = new SimpleSchema({
+ location:{
+		type: String,
+		label:"Tell us where the job will take place"
+	},
+
+	phone:{
+		type: Number,
+		label:"What number can the tradesperson contact you on?"
+	}
+
+});
+
+Jobs.attachSchema([
+	Schemas.detailsInformation,
+	Schemas.contactInformation
+]);
+
+
+SimpleSchema.debug = true;
 
 Meteor.methods({
 	toggleJobApplyedStatus:function(id, currentState){
@@ -99,4 +132,4 @@ Meteor.methods({
 });
 
 
-Jobs.attachSchema(JobSchema);
+

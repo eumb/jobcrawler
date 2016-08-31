@@ -2,18 +2,21 @@
   <nav class="ui menu">
     
           <span >
-            <img alt="UserAccounts" width="25" height="25" src="/imgs/ua-logo.png">
+            <img alt="UserAccounts" width="50" height="50" src="/imgs/ua-logo.png">
           </span>
        
 
       
         <h3 class="header item"> JobCrawler</h3>
-        <a class="active red item" href="{{pathFor 'logedIn'}}">Home</a>
-
-           
-
+        {{#if currentUser}}
+        <a class="item" href="/logedIn"><i class="fa fa-commenting" aria-hidden="true"></i>Home</a>
+        <a class="item" href="/addJob"><i class="fa fa-commenting" aria-hidden="true"></i>Add job</a>
+        <a class="item" href="/enrolled"><i class="fa fa-commenting" aria-hidden="true"></i>Enrolled Job list</a>
+        <a class="item" href="/account"><i class="fa fa-commenting" aria-hidden="true"></i>My account</a>
+        
       <div class="right header item"> Hello {{userInfo}}</div>
 
+       {{/if}}  
 
       <div class="right item">
         

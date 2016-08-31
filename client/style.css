@@ -1,0 +1,13 @@
+.information{
+	background-color:lightgray !important;
+}
+.masthead{
+
+	  max-height: 700px;
+      padding: 1em 0em;
+}
+
+ .masthead .ui.image { 
+ 
+    max-height: 500px;
+}

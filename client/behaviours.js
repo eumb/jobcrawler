@@ -28,5 +28,6 @@ Template.myAccount.onRendered(function(){
   $('#hybrid select').dropdown({on: 'hover'});
 });
 
-
-	
+Template.JobList.onRendered(function(){
+$('.special.cards').dimmer({on: 'hover'});
+});

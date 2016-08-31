@@ -1,39 +1,57 @@
 <template name="JobList">
-	<div class="ui segment">
-	{{#if Template.subscriptionsReady}}
-		{{#each jobs}}
-			<article class="ui card">
-				
-				
-						<h3>
-							{{name}}
-						</h3>
-						<p>{{description}}</p>
-						<p>
-							Categories:
-							{{#each categories}}
-								<span>{{name}}</span>,
-							{{/each}}
-						</p>
-						<a href="/jobDetails/{{_id}}">View Details</a>
-				
-						
-						
-					 
-						
-							<button	class="ui primary basic button toggleisApplied">Apply to this job </button>
-					
-			 	
-			</article>
+
+
+	
+	<div class="ui grid">
+		
+		<div class=" four wide column">
+
+			<p>E un fapt bine stabilit că cititorul va fi sustras de conţinutul citibil al unei pagini atunci când se uită la aşezarea în pagină. Scopul utilizării a Lorem Ipsum, este acela că are o distribuţie a literelor mai mult sau mai puţin normale, faţă de utilizarea a ceva de genul "Conţinut aici, conţinut acolo", făcându-l să arate ca o engleză citibilă. Multe pachete de publicare pentru calculator şi editoare de pagini web folosesc acum Lorem Ipsum ca model standard de text, iar o cautare de "lorem ipsum" va rezulta în o mulţime de site-uri web în dezvoltare. Pe parcursul anilor, diferite versiuni au evoluat, uneori din intâmplare, uneori intenţionat (infiltrându-se elemente de umor sau altceva de acest gen).</p>
+
+		</div>
 			
-			{{else}}
+			<div class="twelve wide column ">
+				
+				<div class="ui segment">
+					{{#if Template.subscriptionsReady}}
 			
-				<h3>You have no enrolled jobs</h3>
-			
-	  	{{/each}}
-	{{else}}
-		<p>Loading</p>
-	{{/if}}
-</div>
+							<div  class="ui two fluid cards">
+								{{#each jobs}}
+								<div class="card">
+									<div class="content center">
+										<div class="header">{{name}}</div>
+										<div class="meta">
+											<span class="left">Location </span><span class="right">{{location}}</span>
+										 	<p>Timing {{urgency}}</p>
+										</div>
+														
+										<div class="description">
+											<h5>Job Description</h5> <article>{{description}}</article>
+											
+										</div>		
+										
+										<div class="meta bottom attached right floated"><a href="/jobDetails/{{_id}}">View Details</a></div>	
+										
+									</div>
+									<div class="extra content">
+										
+										<div class="ui top button attached">
+											<div class="toggleisApplied">Apply job</div>
+										</div>
+
+										{{#each categories}}
+											<span>{{name}}</span>|
+										{{/each}}
+										<span>{{createdAt}}</span>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+					{{else}}
+						<p>Loading</p>
+					{{/if}}
+				</div>
+			</div>
+	</div>
 
 </template>
