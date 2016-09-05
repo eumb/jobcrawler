@@ -12,13 +12,23 @@ Jobs.allow({
 	}
 });
 
-Category = new SimpleSchema({
 
-  name: {
-    type:String
-  }
-
+Schemas.Categories = new SimpleSchema({
+	category:{
+		type: String,
+		label:"What you would need?",
+		autoform:{
+			options:[
+			   	{label: "Bathroom Specialist", value: "bathroom"},
+	       		{label: "Bricklayer", value: "bricklayer"},
+	       		{label: "Builder", value: "builder"}
+			]
+		}
+	}
+		
 });
+
+
 
 Schemas.detailsInformation = new SimpleSchema({
 
@@ -30,22 +40,22 @@ Schemas.detailsInformation = new SimpleSchema({
 		type: String,
 		label:"Describe what you need"
 	},
-/*  categories:{
-    type:[Category],
-    label:"Category"
-  },*/
-   
+
 	urgency:{
 		type: String,
 		label:"When would you like the job to start?",
 		autoform:{
 			options:[
-			   	{label: "Urgently", value: "Urgently"},
+			   	{label: "Urgently", value: "Urgent"},
         		{label: "Flexible start date", value: "Flexible start date"},
         		{label: "Within 2 days", value: "Within 2 days"}
 			]
 		}
 	},
+
+
+
+
 
   isCommited:{
     type:Boolean,
@@ -114,7 +124,8 @@ Schemas.contactInformation = new SimpleSchema({
 
 Jobs.attachSchema([
 	Schemas.detailsInformation,
-	Schemas.contactInformation
+	Schemas.contactInformation,
+	Schemas.Categories
 ]);
 
 

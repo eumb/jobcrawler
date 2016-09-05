@@ -1,36 +1,87 @@
 <template name="nav">
-  <nav class="ui menu">
-    
-          <span >
-            <img alt="UserAccounts" width="50" height="50" src="/imgs/ua-logo.png">
+  
+  <div id="m_menu" class="ui floating sidebar vertical menu inverted">
+       {{#if currentUser}}
+          <span class="item" >
+            <img alt="UserAccounts" width="50" height="50" src="/imgs/create_thumb.png">
           </span>
+        <a class="header item" href="/logedIn"> JobCrawler</a>
+        {{else}}
+          <span class="item" >
+            <img alt="UserAccounts" width="50" height="50" src="/imgs/create_thumb.png">
+          </span>
+        <a class="header item" href="/"> JobCrawler</a>
+        {{/if}}
+        {{#if currentUser}}
+     
+          <a class="active item" href="/logedIn">Home</a>
+          <a class="item" href="/addJob">Add job</a>
+          <a class="item" href="/enrolled">Enrolled Job list</a>
+          <a class="item" href="/account">My account</a>
+          
+        {{/if}} 
+        
        
+            
+            {{#if currentUser}}
+               <div class="right header item"> Hello {{userInfo}}</div>
+               <a class="item logout" href="#">Logout</a>
+            {{else}}
+               <a class="item" href="{{pathFor route='signUp'}}">Register</a>
+               <a class="item" href="{{pathFor route='signIn'}}">Login</a>
+            {{/if}}
 
       
-        <h3 class="header item"> JobCrawler</h3>
-        {{#if currentUser}}
-        <a class="item" href="/logedIn"><i class="fa fa-commenting" aria-hidden="true"></i>Home</a>
-        <a class="item" href="/addJob"><i class="fa fa-commenting" aria-hidden="true"></i>Add job</a>
-        <a class="item" href="/enrolled"><i class="fa fa-commenting" aria-hidden="true"></i>Enrolled Job list</a>
-        <a class="item" href="/account"><i class="fa fa-commenting" aria-hidden="true"></i>My account</a>
+  </div>
+
+    <div id="header">
+        <div id="mainHead"> 
+            <div id="menu" class="ui inverted menu">
+
+                {{#if currentUser}}
+                    <span class="item" >
+                        <img alt="UserAccounts" width="50" height="50" src="/imgs/create_thumb.png">
+                    </span>
+                    <a class="header item" href="/logedIn"> JobCrawler</a>
+                    {{else}}
+                    <span class="item" >
+                        <img alt="UserAccounts" width="50" height="50" src="/imgs/create_thumb.png">
+                    </span>
+                    <a class="header item" href="/"> JobCrawler</a>
+                {{/if}}
+                {{#if currentUser}}
+
+                    <a class="active item" href="/logedIn">Home</a>
+                    <a class="item" href="/addJob">Add job</a>
+                    <a class="item" href="/enrolled">Enrolled Job list</a>
+                    <a class="item" href="/account">My account</a>
+
+                {{/if}} 
+
+                <div class="right menu">
+
+                    {{#if currentUser}}
+                        <div class="right header item"> Hello {{userInfo}}</div>
+                        <a class="item logout" href="#">Logout</a>
+                        {{else}}
+                        <a class="item" href="{{pathFor route='signUp'}}">Register</a>
+                        <a class="item" href="{{pathFor route='signIn'}}">Login</a>
+                    {{/if}}
+
+                </div>
+            </div>
+
+           
+
+
+            <div id="m_btn" class="ui labeled icon button black">
+                <i class="icon list layout"></i>Menu
+            </div>
+            
+
+           
+        </div>
+            
         
-      <div class="right header item"> Hello {{userInfo}}</div>
-
-       {{/if}}  
-
-      <div class="right item">
-        
-        {{#if currentUser}}
-            <li><a href="#" class="logout">Logout</a></li>
-        {{else}}
-            <li><a href="{{pathFor route='signUp'}}">Register</a></li>
-            <li><a href="{{pathFor route='signIn'}}">Login</a></li>
-        {{/if}}
-
-      </div>
-
-
- 
-
-  </nav>
+    </div>  
 </template>

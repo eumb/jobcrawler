@@ -1,17 +1,78 @@
 <template name="basic">
-  {{> wizard id="basic" route="basic" steps=steps}}
+  {{> wizard id="basic" route="basic" steps=steps stepsTemplate="steps_semanticUI" buttonClasses="ui button"}}
+
 </template>
 
-<template name="information">
-  {{> quickform id="information-form" doc=step.data schema=step.schema}}
+
+
+<template name="categories">
+	
+{{#autoForm id="categories-form" doc=step.data schema=step.schema}}
+<fieldset>
+	<form class="ui form">
+		<div class="field">
+			<p></p>
+	    	{{> afQuickField  name='category' type='select' }}  	
+		</div>
+	</form>
+</fieldset>
+	{{> wizardButtons}} 
+
+
+{{/autoForm}}
+
+</template>
+<template name="details">
+ <!--  {{> quickform id="details-form" doc=step.data schema=step.schema}} -->
+
+
+  {{#autoForm id="details-form" doc=step.data schema=step.schema}}
+	<fieldset>
+	    <form class="ui form">
+		    <legend>Add a Job</legend>
+		    <div class="field">
+		    	<p></p>
+		     	 {{> afQuickField name='name' placeholder='"e.g Paint a room"'}}
+		    </div>
+		    <div class="field">
+		     	<p></p>
+		      	{{> afQuickField  name='description' rows=6 placeholder='"Add the job description in as many details as possible"'}}
+			</div>
+			<div class="field">
+				<p></p>
+		    	{{> afQuickField name='urgency' type='select' }}  	
+			</div>	
+		</form>
+	</fieldset>
+
+	{{> wizardButtons}} 
+{{/autoForm}}
+
+
 </template>
 
-<template name="confirm">
-  {{#autoForm id="confirm-form" doc=step.data schema=step.schema}}
 
-    {{> afQuickField name="acceptTerms"}}
+<template name="contactInformation">
+  {{#autoForm id="contactInformation-form" doc=step.data schema=step.schema}}
+<!-- 
+    {{> afQuickField name="acceptTerms"}} -->
 
-    {{> wizardButtons}} /* this will render back, next and confirm buttons */
+    <fieldset>
+    <form class="ui form">
+			<div class="field">
+		     	<p></p>
+		     	{{> afQuickField name='location' placeholder='"e.g Simion Barnutiu , Timisoara"'}}
+
+		     </div>
+ 			
+ 			<div class="field">
+ 			<p></p>
+ 				{{> afQuickField name='phone' rows=1 placeholder='"We ask for your phone number because most tradespeople will give you a call to arrange a quote."'}}
+		     </div>
+	</form>
+</fieldset>
+
+    {{> wizardButtons}} 
 
   {{/autoForm}}
 </template>
