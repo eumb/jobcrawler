@@ -25,6 +25,7 @@ kadira:blaze-layout
 arillo:flow-router-helpers
 aldeed:collection2
 aldeed:autoform
+aldeed:template-extension
 meteortoys:allthings
 datariot:ganalytics
 stolinski:stylus-multi

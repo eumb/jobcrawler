@@ -1,34 +1,100 @@
 <template name="home">
-<img id ="jumboimage" src="imgs/logoimage_smaller3.png" alt="jumboimage">
+<div id="easy_step">
+    <img id ="jumboimage" src="imgs/logoimage_smaller3.png" alt="jumboimage">
+        <div id="quickAdd">
+            <h1 class="quickAddheader inverted">As easy as 1   2    3 ....</h1>
+                <!-- <div class="quickAddform">
+                    <h3>What are you looking for?</h3>
+                 
+                            {{#autoForm id="categories-form" collection="Jobs" class="quickForm"}}
+                                
+                                    <form class="form">
+                                        <div class="field">
+                                           {{> afQuickField  name='category' type='select' class="quickSelect"}}      
+                                        </div>
+                                    </form>
+                               {{> wizardButtons}} 
+                               
+                </div>         -->
+        </div>
+</div>  
+
 <div id="home" class="ui stackable three column grid">
     <div class="column">
-        <div class="ui segment"> 
+        <div class="ui "> 
             <div class=item>
-                <a class="item" href="/addJob">
-                <h2 class="ui header"><i class="fa fa-plus-square-o" aria-hidden="true"></i> Create a job</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-              
+                <a class=" item" href="/addJob">
+                    
+                    <div class="homecolumns"> 
+                        <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                        <span class ="header"><h2>Create a job</h2></span>
+                     </div>   
+                     <div class="ui divider"></div>
+                     <div class="text">
+                         <p>
+                                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                         </p>
+                    </div>
+
+                      
+                   
                 </a>
             </div>
         </div>       
     </div>
-    <div class="column">
-        <div class="ui segment"> 
-            <h2 class="ui header"><i class="fa fa-search" aria-hidden="true"></i> Look for opportunities</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-                
 
-        </div>
-                
-    </div>
+
+
     <div class="column">
-        <div class="ui segment"> 
-            <h2 class="ui header"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Rate and review</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-           
-        </div>
-                
+        <div class="ui "> 
+            <div class=item>
+                <a class=" item" href="/addJob">
+                    
+                    <div class="homecolumns"> 
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <span class ="header"><h2>Search jobs</h2></span>
+                     </div>   
+                     <div class="ui divider"></div>
+                     <div class="text">
+                         <p>
+                                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                         </p>
+                    </div>
+
+                      
+                   
+                </a>
+            </div>
+        </div>       
     </div>
+
+
+
+        <div class="column">
+        <div class="ui "> 
+            <div class=item>
+                <a class=" item" href="/addJob">
+                    
+                    <div class="homecolumns"> 
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <span class ="header"><h2>Rate & Review</h2></span>
+                     </div>   
+                     <div class="ui divider"></div>
+                     <div class="text">
+                         <p>
+                                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                         </p>
+                    </div>
+
+                      
+                   
+                </a>
+            </div>
+        </div>       
+    </div>
+
+
+
 </div>
 
 

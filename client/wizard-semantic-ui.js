@@ -9,5 +9,5 @@ Template.steps_semanticUI.helpers({
       return 'completed';
     }
     return 'disabled';
-  }
+  },
 });

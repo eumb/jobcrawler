@@ -6,7 +6,17 @@ body{
 	font-family: "helvetica", arial;
 	-webkit-font-smoothing: antialiased;
 	font-weight: 200;
+	background: #FFFCF5;
+}
 
+.spacing{
+
+	min-height: 20px;
+}
+
+#wrapper {
+	min-height:100%;
+   position:relative;
 }
 
 #maincontainer{
@@ -15,14 +25,18 @@ body{
 
 
 
+#mainHead .menu{
 
-#mainHead{
-
-
+	background: #25373D;
 	text-align: center;
 
 }
 
+#logo{
+
+	height: 40%;
+	
+}
 
 #menu{
 	margin: 0 auto;
@@ -36,22 +50,81 @@ body{
 	width: 100%;
 	height: auto;
 	min-height: 100%;
+}
 
-
+#easy_step{
 
 }
 
+#quickAdd{
+	position: absolute;
+	top:20%;
+	left:20%;
+}
+
+.quickAddheader{
+	padding-bottom: 10px;
+	font-size: 5rem;
+}
+
+.quickAddform{
+	margin-top: 50px;
+}
+
+.quickForm{
+	border: none !important;
+
+}
+.quickSelect{
+
+
+}
+ 
 #home{
-		overflow: hidden;
-	padding-bottom: 20px;
+	
+	padding-top: 5%;
+	padding-bottom: 20%;
+	overflow: hidden;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 10px;
+	margin-top: 10px;
+
+	color:#666;
 }
 
+.homecolumns{
+
+	display: flex;
+	align-items:stretch;
+}
+
+.homecolumns .header{
+	color: black;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+.homecolumns .fa{
+
+	color: #FF5722;
+	font-size: 4em;
+}
+
+.text{
+	color: #BDBDBD;
+}
+
+
+
+/*Footer*/
 #footer {
 
+	position: absolute;
+	bottom: 0;
+	left: 0;
 	width:100%;
-	clear: both;
-	float: left;
-	overflow: hidden;
+
+	background: #25373D;
 	width:100%;
 	padding: 0 20px;
 
@@ -63,8 +136,53 @@ body{
 }
 
 
+/* Sign in / up forms */
+.main_page_container{
+		padding-top: 5%;
+	padding-bottom: 20%;
+	overflow: hidden;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 10px;
+	margin-top: 10px;
+
+	color:#666;
+}
+
+.at-form{
+
+	margin-top: 20px;
+	margin-bottom:20px;
+	
+}
 
 
+
+/*AddJob*/
+
+.addJobForm{
+
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+.addJobFormSteps{
+
+	text-align: center;
+	border: none !important;
+	padding-left: 10%;
+	padding-right: 10%;
+	margin-bottom: 30px !important;
+	margin-top: 30px !important;
+
+
+
+}
+
+.addJobFormFields{
+
+	color: blue;
+}
 
 @media all and (min-width: 631px){
 	html body.pushed{
@@ -91,3 +209,8 @@ body{
 		display: none;
 	}
 }
+
+
+
+
+

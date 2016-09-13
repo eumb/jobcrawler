@@ -1,7 +1,42 @@
 [[[[[ /var/www/webapps/jobcrawler ]]]]]
 
 => Started proxy.
-[34mI20160904-15:39:18.580(3)? [39mundefined
+[34mI20160908-10:52:07.608(3)? [39mundefined
 => Started your app.
 
 => App running at: http://localhost:3001/
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)=> Client modified -- refreshing (x5)=> Client modified -- refreshing (x6)=> Client modified -- refreshing (x7)=> Client modified -- refreshing (x8)=> Client modified -- refreshing (x9)=> Client modified -- refreshing (x10)=> Client modified -- refreshing (x11)=> Client modified -- refreshing (x12)=> Client modified -- refreshing (x13)=> Client modified -- refreshing (x14)=> Client modified -- refreshing (x15)=> Client modified -- refreshing (x16)=> Client modified -- refreshing (x17)=> Client modified -- refreshing (x18)=> Client modified -- refreshing (x19)=> Client modified -- refreshing (x20)=> Client modified -- refreshing (x21)=> Client modified -- refreshing (x22)=> Client modified -- refreshing (x23)=> Client modified -- refreshing (x24)=> Client modified -- refreshing (x25)=> Client modified -- refreshing (x26)=> Client modified -- refreshing (x27)=> Client modified -- refreshing (x28)=> Client modified -- refreshing (x29)=> Client modified -- refreshing (x30)=> Client modified -- refreshing (x31)=> Client modified -- refreshing (x32)=> Client modified -- refreshing (x33)=> Client modified -- refreshing (x34)=> Client modified -- refreshing (x35)=> Client modified -- refreshing (x36)=> Client modified -- refreshing (x37)=> Client modified -- refreshing (x38)=> Client modified -- refreshing (x39)=> Client modified -- refreshing (x40)=> Client modified -- refreshing (x41)=> Client modified -- refreshing (x42)=> Client modified -- refreshing (x43)=> Client modified -- refreshing (x44)=> Client modified -- refreshing (x45)=> Client modified -- refreshing (x46)=> Client modified -- refreshing (x47)=> Client modified -- refreshing (x48)=> Client modified -- refreshing (x49)=> Client modified -- refreshing (x50)=> Client modified -- refreshing (x51)=> Client modified -- refreshing (x52)=> Client modified -- refreshing (x53)=> Client modified -- refreshing (x54)=> Client modified -- refreshing (x55)=> Client modified -- refreshing (x56)=> Client modified -- refreshing (x57)=> Client modified -- refreshing (x58)
+=> Errors prevented startup:
+   
+   While processing files with templating (for target web.browser):
+   client/Views/home.html:18: Unexpected HTML close tag
+   ...               </div>                 </d...
+   ^
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+[34mI20160908-16:56:36.877(3)? [39mundefined
+=> Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)=> Client modified -- refreshing (x5)=> Client modified -- refreshing (x6)
+=> Errors prevented startup:
+   
+   While processing files with templating (for target web.browser):
+   client/wizard-semantic-ui.html:19: Unexpected HTML close tag
+   .../div>        </div>
+   ^
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+[34mI20160908-20:15:39.171(3)? [39mundefined
+=> Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)=> Client modified -- refreshing (x5)=> Client modified -- refreshing (x6)=> Client modified -- refreshing (x7)=> Client modified -- refreshing (x8)=> Client modified -- refreshing (x9)=> Client modified -- refreshing (x10)=> Client modified -- refreshing (x11)=> Client modified -- refreshing (x12)=> Client modified -- refreshing (x13)=> Client modified -- refreshing (x14)=> Client modified -- refreshing (x15)=> Client modified -- refreshing (x16)=> Client modified -- refreshing (x17)=> Client modified -- refreshing (x18)=> Client modified -- refreshing (x19)=> Client modified -- refreshing (x20)=> Client modified -- refreshing (x21)=> Client modified -- refreshing (x22)=> Client modified -- refreshing (x23)=> Client modified -- refreshing (x24)=> Client modified -- refreshing (x25)=> Client modified -- refreshing (x26)=> Client modified -- refreshing (x27)=> Client modified -- refreshing (x28)=> Client modified -- refreshing (x29)=> Client modified -- refreshing (x30)=> Client modified -- refreshing (x31)=> Client modified -- refreshing (x32)=> Client modified -- refreshing (x33)=> Client modified -- refreshing (x34)=> Client modified -- refreshing (x35)=> Client modified -- refreshing (x36)=> Client modified -- refreshing (x37)=> Client modified -- refreshing (x38)
+=> Errors prevented startup:
+   
+   While processing files with ecmascript (for target web.browser):
+   client/addJob.js:31:21: Unexpected token (31:21)
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+[34mI20160908-23:51:28.598(3)? [39mundefined
+=> Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)=> Client modified -- refreshing (x5)=> Client modified -- refreshing (x6)

@@ -6,3 +6,6 @@ Template.nav.helpers({
 	}
 	
 });
+
+
+Template.myAtForm.replaces("atForm");

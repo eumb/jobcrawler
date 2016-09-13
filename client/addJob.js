@@ -13,14 +13,16 @@ Template.basic.helpers({
       template: 'details',
       formId: 'details-form',
       schema: Schemas.detailsInformation
-    }, {
+    }, 
+    {
       id: 'contactInformation',
       title: 'Contact & confirm',
       template: 'contactInformation',
       formId: 'contactInformation-form',
       schema: Schemas.contactInformation,
+    
       onSubmit: function(data, wizard) {
-        let self = this;
+        var self = this;
         Jobs.insert(_.extend(wizard.mergedData(), data), function(err, id) {
           if (err) {
             self.done();
