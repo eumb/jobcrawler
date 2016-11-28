@@ -13,7 +13,7 @@
         <a class="header item" href="/"> JobCrawler</a>
         {{/if}}
         {{#if currentUser}}
-     
+      
           <a class="active item" href="/logedIn">Home</a>
           <a class="item" href="/addJob">Add job</a>
           <a class="item" href="/enrolled">Enrolled Job list</a>
@@ -36,18 +36,15 @@
 
     <div id="header">
         <div id="mainHead"> 
-            <div id="menu" class="ui massive inverted menu">
+            <div id="menu" class="ui large inverted menu">
+
+                  <div class="item" >
+                    <img class="ui medium image" alt="UserAccounts" src="/imgs/logo2.png">
+                  </div>
+
 
                 {{#if currentUser}}
-                    <span class="item" >
-                        <img class="large" alt="UserAccounts" src="/imgs/logo.png">
-                    </span>
-                    <a class="header item" href="/logedIn"> JobCrawler</a>
-                    {{else}}
-                    <span class="item" >
-                        <img class="large" alt="UserAccounts"  src="/imgs/logo.png">
-                    </span>
-                    <a class="header item" href="/"> JobCrawler</a>
+
                 {{/if}}
                 {{#if currentUser}}
 
@@ -58,7 +55,7 @@
 
                 {{/if}} 
 
-                <div class="right menu">
+                <div id="right_menu" class="right menu">
 
                     {{#if currentUser}}
                         <div class="right header item"> Hello {{userInfo}}</div>

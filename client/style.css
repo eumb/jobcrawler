@@ -3,11 +3,10 @@ body{
 	padding:0;
 	width: 100%;
 	height: 100%;
-	font-family: "helvetica", arial;
-	-webkit-font-smoothing: antialiased;
+	
 	font-weight: 200;
-	background: #FFFCF5;
-}
+/*	background: #FFFCF5;
+*/}
 
 .spacing{
 
@@ -24,28 +23,64 @@ body{
 }
 
 
-
+/*Navigation menu */
 #mainHead .menu{
 
-	background: #25373D;
+	background: white;
 	text-align: center;
-
-}
-
-#logo{
-
-	height: 40%;
 	
+
 }
+
+/*
+tests for css logo; not used*/
+.boxed{
+	width: 140px;
+	height: 80px;
+	color: white;
+	background-color: black;
+	margin-left: 5%;
+}
+.boxed #logo{
+	font-family: 'Rubik Mono One', sans-serif !important;
+	font-size: 24px;
+}
+.boxed #sublogo{
+	font-family: sans-serif !important;
+	font-size: 18px;
+
+}
+
+/**/
+
+
+
+
 
 #menu{
 	margin: 0 auto;
+   
+}
+
+
+#menu .item{
+	color:black;
 }
 
 #m_btn{
 
 	display: none;}
 
+#right_menu{
+
+	font-size: 1.5rem !important;
+	color: black;
+	margin-right:5%;
+
+}
+
+
+/*Jumbo image*/
 #jumboimage{
 	width: 100%;
 	height: auto;
@@ -124,10 +159,14 @@ body{
 	left: 0;
 	width:100%;
 
-	background: #25373D;
+	background: white;
 	width:100%;
 	padding: 0 20px;
+	color:black;
+}
 
+#footer .item{
+	color:black;
 }
 
 

@@ -29,3 +29,8 @@ Template.nav.onRendered (function () {
     	$(this).addClass('active');
     }); 
 };*/
+
+
+Meteor._reload.onMigrate(function() {
+  return [false];
+});

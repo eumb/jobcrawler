@@ -133,7 +133,7 @@ SimpleSchema.debug = true;
 
 Meteor.methods({
 	toggleJobApplyedStatus:function(id, currentState){
-		Jobs.update(id,{
+  Jobs.update(id, {
 				$set:{
 					isApplyed:!currentState,
 					purchasedBy:Meteor.userId()
