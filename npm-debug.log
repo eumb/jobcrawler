@@ -1,0 +1,51 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'useraccounts:unstyled' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'useraccounts:unstyled', null ]
+7 verbose cache add name=undefined spec="useraccounts:unstyled" args=["useraccounts:unstyled",null]
+8 verbose parsed url { protocol: 'useraccounts:',
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: 'unstyled',
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: 'unstyled',
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: null,
+8 verbose parsed url   path: null,
+8 verbose parsed url   href: 'useraccounts:unstyled' }
+9 silly lockFile 0ee582f9-useraccounts-unstyled useraccounts:unstyled
+10 verbose lock useraccounts:unstyled C:\Users\Yoyo\AppData\Roaming\npm-cache\0ee582f9-useraccounts-unstyled.lock
+11 silly lockFile 0ee582f9-useraccounts-unstyled useraccounts:unstyled
+12 silly lockFile 0ee582f9-useraccounts-unstyled useraccounts:unstyled
+13 verbose addNamed [ 'useraccounts:unstyled', '' ]
+14 verbose addNamed [ null, '*' ]
+15 silly lockFile 5585b674-useraccounts-unstyled useraccounts:unstyled@
+16 verbose lock useraccounts:unstyled@ C:\Users\Yoyo\AppData\Roaming\npm-cache\5585b674-useraccounts-unstyled.lock
+17 silly addNameRange { name: 'useraccounts:unstyled', range: '*', hasData: false }
+18 error TypeError: Cannot call method 'replace' of null
+18 error     at cf (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-cache-filename\index.js:14:22)
+18 error     at RegClient.get (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\get.js:28:20)
+18 error     at addNameRange (C:\Program Files\nodejs\node_modules\npm\lib\cache\add-named.js:201:12)
+18 error     at C:\Program Files\nodejs\node_modules\npm\lib\cache\add-named.js:47:5
+18 error     at C:\Program Files\nodejs\node_modules\npm\lib\utils\locker.js:30:7
+18 error     at cb (C:\Program Files\nodejs\node_modules\npm\node_modules\lockfile\lockfile.js:149:38)
+18 error     at C:\Program Files\nodejs\node_modules\npm\node_modules\lockfile\lockfile.js:171:16
+18 error     at Object.oncomplete (fs.js:107:15)
+19 error If you need help, you may report this *entire* log,
+19 error including the npm and node versions, at:
+19 error     <http://github.com/npm/npm/issues>
+20 error System Windows_NT 6.2.9200
+21 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "useraccounts:unstyled"
+22 error cwd F:\WebApps\jobcrawler
+23 error node -v v0.10.32
+24 error npm -v 1.4.28
+25 error type non_object_property_call
+26 verbose exit [ 1, true ]

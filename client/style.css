@@ -23,14 +23,43 @@ body{
 }
 
 
-/*Navigation menu */
+/*///////////////////////////////////////////////////*/
+
+/*Nav menu */
 #mainHead .menu{
 
 	background: white;
 	text-align: center;
-	
+	margin-top: 15px;
 
 }
+
+#main_logo{
+	max-width: 150px;
+}
+
+#menu{
+	margin: 0 auto;
+    max-height: 50px;
+}
+
+#menu .item{
+	color:black;
+}
+
+#m_btn{
+
+	display: none;}
+
+#right_menu{
+
+	color: black;
+	margin-right:5%;
+
+}
+
+/*//////////////////////////////////////////////////////////*/
+
 
 /*
 tests for css logo; not used*/
@@ -57,27 +86,7 @@ tests for css logo; not used*/
 
 
 
-#menu{
-	margin: 0 auto;
-   
-}
 
-
-#menu .item{
-	color:black;
-}
-
-#m_btn{
-
-	display: none;}
-
-#right_menu{
-
-	font-size: 1.5rem !important;
-	color: black;
-	margin-right:5%;
-
-}
 
 
 /*Jumbo image*/
@@ -92,7 +101,7 @@ tests for css logo; not used*/
 }
 
 #quickAdd{
-	position: absolute;
+
 	top:20%;
 	left:20%;
 }
@@ -114,7 +123,18 @@ tests for css logo; not used*/
 
 
 }
+
+#jumbotron{
+	margin-left: 10%;
+	margin-right: 10%;
+
+}
  
+#super_text{
+	padding-top: 10%;
+	font-weight: bolder;
+	font-size: 3rem;
+}
 #home{
 	
 	padding-top: 5%;
@@ -141,7 +161,7 @@ tests for css logo; not used*/
 }
 .homecolumns .fa{
 
-	color: #FF5722;
+	color: #ff6e00;
 	font-size: 4em;
 }
 
@@ -196,6 +216,18 @@ tests for css logo; not used*/
 }
 
 
+#at-field-name{
+	color:red;  /*for testing*/
+}
+#at-btn{
+	background-color: white;
+	color:black;
+	font-weight: bold;
+}
+
+.ui.stacked.segment{
+	border:none !important;
+}
 
 /*AddJob*/
 

@@ -1,5 +1,6 @@
 <template name="nav">
   
+  <!-- Mobile menu -->
   <div id="m_menu" class="ui floating sidebar vertical menu inverted">
        {{#if currentUser}}
           <span class="item" >
@@ -33,30 +34,33 @@
 
       
   </div>
-
+<!-- Web menu -->
     <div id="header">
         <div id="mainHead"> 
             <div id="menu" class="ui large inverted menu">
 
-                  <div class="item" >
+                  <div id ="main_logo" class="item" >
                     <img class="ui medium image" alt="UserAccounts" src="/imgs/logo2.png">
                   </div>
 
+ 
 
-                {{#if currentUser}}
 
-                {{/if}}
+
                 {{#if currentUser}}
 
                     <a class="active item" href="/logedIn">Home</a>
                     <a class="item" href="/addJob">Add job</a>
                     <a class="item" href="/enrolled">Enrolled Job list</a>
                     <a class="item" href="/account">My account</a>
+                    
+                
 
                 {{/if}} 
 
                 <div id="right_menu" class="right menu">
-
+                    <a class="item" href="{{pathFor route='/'}}">The mission</a>
+                    <a class="item" href="{{pathFor route='/'}}">Success Stories</a>
                     {{#if currentUser}}
                         <div class="right header item"> Hello {{userInfo}}</div>
                         <a class="item logout" href="#">Logout</a>
@@ -80,5 +84,6 @@
         </div>
             
         
-    </div>  
+    </div> 
+    <div class="ui divider"></div>
 </template>

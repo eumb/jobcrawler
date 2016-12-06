@@ -110,7 +110,6 @@ spacebars@1.0.12
 spacebars-compiler@1.0.12
 srp@1.0.9
 standard-minifier-js@1.2.0
-stolinski:stylus-multi@1.4.3
 templating@1.2.13
 templating-tools@1.0.4
 tracker@1.1.0
