@@ -96,15 +96,6 @@ tests for css logo; not used*/
 	min-height: 100%;
 }
 
-#easy_step{
-
-}
-
-#quickAdd{
-
-	top:20%;
-	left:20%;
-}
 
 .quickAddheader{
 	padding-bottom: 10px;
@@ -140,8 +131,8 @@ tests for css logo; not used*/
 	padding-top: 5%;
 	padding-bottom: 20%;
 	overflow: hidden;
-	margin-left: 10%;
-	margin-right: 10%;
+	margin-left: 1%;
+	margin-right: 1%;
 	margin-bottom: 10px;
 	margin-top: 10px;
 
@@ -179,25 +170,30 @@ tests for css logo; not used*/
 	left: 0;
 	width:100%;
 
-	background: white;
+	/*background: white;*/
 	width:100%;
 	padding: 0 20px;
-	color:black;
+	/*color:black;*/
 }
-
+/*
 #footer .item{
 	color:black;
-}
+}*/
 
 
 .information{
 	background-color:lightgray !important;
 }
 
+.ui.footer.segment {
+    margin: 5em 0em 0em;
+    padding: 5em 0em;
+}
+
 
 /* Sign in / up forms */
 .main_page_container{
-		padding-top: 5%;
+	padding-top: 5%;
 	padding-bottom: 20%;
 	overflow: hidden;
 	margin-left: 10%;

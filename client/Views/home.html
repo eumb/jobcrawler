@@ -1,167 +1,101 @@
 <template name="home">
+  <div id="jumbotron" class="ui two column grid">
+    <div id="super_text" class="column">
+      Simple and Effective
+      
+      <div>
+        <p></p>
+        <h2>Your home ideas, plans, needs </h2>
+        <h2>Taken care of fast and reliable</h2>
+      </div>
+      <div>
+        <h4>Just post the work to be done and the wide selection of available handymans will take care of the rest
 
-   <!--  <img id ="jumboimage" src="imgs/logoimage_smaller3.png" alt="jumboimage"> -->
+        </h4>
         
-          <!--   <h1 class="quickAddheader inverted">As easy as 1   2    3 ....</h1> -->
-                <!-- <div class="quickAddform">
-                    <h3>What are you looking for?</h3>
-                 
-                            {{#autoForm id="categories-form" collection="Jobs" class="quickForm"}}
-                                
-                                    <form class="form">
-                                        <div class="field">
-                                           {{> afQuickField  name='category' type='select' class="quickSelect"}}      
-                                        </div>
-                                    </form>
-                               {{> wizardButtons}} 
-                               
-                </div>         -->
-
-
-             
-
-                <div id="jumbotron" class="ui two column grid">
-                    <div id="super_text" class="column">
-                        Simple and Effective
-                   
-                        <div>
-                         <p></p>
-                            <h2>Your home ideas, plans, needs </h2>
-                            <h2>Taken care of fast and reliable</h2>
-
-                        </div>
-                        <div>
-                            <h4>Just post the work to be done and the wide selection of available handymans will take care of the rest</h4>
-                        </div>
-                    </div>
-                    <div class="column">
-                        
-                        <img id ="jumboimage" src="imgs/smallhouse.jpg" alt="jumboimage">
-
-                    </div>
-                </div>
-
-
-<div id="easy_step">
-<div id="quickAdd">
-<div id="home" class="ui stackable three column grid">
+      </div>
+    </div>
     <div class="column">
-        <div class="ui "> 
-            <div class=item>
-                <a class=" item" href="/addJob">
-                    
-                    <div class="homecolumns"> 
-                        <i class="fa fa-plus-square-o" aria-hidden="true"></i>
-                        <span class ="header"><h2>Post request</h2></span>
-                     </div>   
-                     <div class="ui divider"></div>
-                     <div class="text">
-                         <p>
-                                In 3 quick steps you can post a job request so an entrepreneur would respond
-                         </p>
-                    </div>
-
-                      
-                   
-                </a>
-            </div>
-        </div>       
+      
+      <img id ="jumboimage" class="ui fluid image" src="imgs/smallhouse.jpg" alt="jumboimage">
     </div>
-
-
-
-    <div class="column">
-        <div class="ui "> 
-            <div class=item>
+  </div>
+  <div class="ui main container">
+  
+      <div id="main_actions">
+        <div id="home" class="ui stackable three column grid">
+          <div class="column">
                 <a class=" item" href="/addJob">
-                    
-                    <div class="homecolumns"> 
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                        <span class ="header"><h2>Entrepeneur looking for jobs</h2></span>
-                     </div>   
-                     <div class="ui divider"></div>
-                     <div class="text">
-                         <p>
-                                As an entrepeneur search for all available jobs 
-                         </p>
-                    </div>
-
-                      
-                   
+                  
+                  <div class="homecolumns">
+                    <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                    <span class ="header"><h2>Post request</h2></span>
+                  </div>
+                  <div class="ui divider"></div>
+                  <div class="text">
+                    <h4>
+                      In 3 quick steps you can post a job request so an entrepreneur would respond
+                    </h4>
+                    <p>
+          Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective. Nu doar că a supravieţuit timp de cinci secole, dar şi a facut saltul în tipografia electronică practic neschimbată. 
+                    </p>
+                  </div>
+                  
+                  
                 </a>
-            </div>
-        </div>       
-    </div>
-
-
-
-        <div class="column">
-        <div class="ui "> 
-            <div class=item>
-                <a class=" item" href="/addJob">
-                    
-                    <div class="homecolumns"> 
-                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                        <span class ="header"><h2>Rate & Review</h2></span>
-                     </div>   
-                     <div class="ui divider"></div>
-                     <div class="text">
-                         <p>
-                                You have had one job completed?
-                                This is the place to share your thoughts, comments and provide reviews yo your entrepeneur
-                         </p>
-                    </div>
-
-                      
-                   
-                </a>
-            </div>
-        </div>       
-    </div>
-
-
-
-</div>
-
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="ui page grid">
-	<div class="ui header"><h1 class="ui center header">Jump into action</h1></div>
-    <div class="three column row">
-
-        <div class="column">
-            <h2 class="ui header"><i class="fa fa-search" aria-hidden="true"></i> Look for opportunities</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+          </div>
+          
+          <div class="column">
             
-        </div>
-        <div class="column">
-            <h2 class="ui header"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Rate and review</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-       
-        </div>
-    </div>
-    <div class="row">
-        <div class="column">
-            <div class="ui divider"></div>  
-            <span>&copy; Company 2014</span>
-        </div>
-    </div>
-</div>
- -->
+                <a class=" item" href="/addJob">
+                  
+                  <div class="homecolumns">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <span class ="header"><h2>Entrepeneur looking for jobs</h2></span>
+                  </div>
+                  <div class="ui divider"></div>
+                  <div class="text">
+                    <h4>
+                      As an entrepeneur search for all available jobs
+                    </h4>
+                            <p>
+          Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective. Nu doar că a supravieţuit timp de cinci secole, dar şi a facut saltul în tipografia electronică practic neschimbată. 
+                    </p>
+                  </div>
+                  
+                  
+                </a>
+         
+          </div>
 
+
+          <div class="column">
+            
+                <a class=" item" href="/addJob">
+                  
+                  <div class="homecolumns">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    <span class ="header"><h2>Rate & Review</h2></span>
+                  </div>
+                  <div class="ui divider"></div>
+                  <div class="text">
+                    <h4>
+                      You have had one job completed?
+                      This is the place to share your thoughts, comments and provide reviews yo your entrepeneur
+                    </h4>
+        <p>
+          Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective. Nu doar că a supravieţuit timp de cinci secole, dar şi a facut saltul în tipografia electronică practic neschimbată. 
+                    </p>
+                  </div>
+                  
+                  
+                </a>
+           
+          </div>
+        </div>
+      </div>
+  
+
+  </div>
 
 </template>
