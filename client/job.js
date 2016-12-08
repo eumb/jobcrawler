@@ -4,3 +4,14 @@ Template.JobList.events({
 	}
 	
 });
+
+/*Template.JobList.helpers({
+	textValue: function() {
+		return 
+    if (this.en) {
+      return this.text.tc;
+    } else if (this.tc) {
+      return this.text.tc;
+    }
+  }
+});*/

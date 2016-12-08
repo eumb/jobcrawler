@@ -3,7 +3,13 @@ Template.myAccount.onRendered(function(){
 });
 
 Template.JobList.onRendered(function(){
-$('.special.cards').dimmer({on: 'hover'});
+ // $('.special.cards').dimmer({on: 'hover'});
+
+ $('#category').append('<p>Loading image</p>');
+
+/*  $("#category").text("test");
+  alert($("#category").text());
+  console.log("Joblist loaded");*/
 });
 
 Template.nav.onRendered (function () {

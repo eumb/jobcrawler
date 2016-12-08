@@ -19,7 +19,7 @@ Schemas.Categories = new SimpleSchema({
 		label:"What you would need?",
 		autoform:{
 			options:[
-			   	{label: "Bathroom Specialist", value: "bathroom"},
+			   	{label: "Bathroom Specialist", value: "bath"},
 	       		{label: "Bricklayer", value: "bricklayer"},
 	       		{label: "Builder", value: "builder"}
 			]

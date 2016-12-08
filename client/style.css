@@ -26,21 +26,17 @@ body{
 /*///////////////////////////////////////////////////*/
 
 /*Nav menu */
-#mainHead .menu{
 
-	background: white;
-	text-align: center;
-	margin-top: 15px;
-
-}
 
 #main_logo{
 	max-width: 150px;
 }
 
 #menu{
-	margin: 0 auto;
+	margin-top:15px;
+
     max-height: 50px;
+    border: none;
 }
 
 #menu .item{
@@ -216,13 +212,13 @@ tests for css logo; not used*/
 	color:red;  /*for testing*/
 }
 #at-btn{
-	background-color: white;
-	color:black;
+	background-color: black;
+	color:white;
 	font-weight: bold;
 }
 
 .ui.stacked.segment{
-	border:none !important;
+	border:none;
 }
 
 /*AddJob*/
