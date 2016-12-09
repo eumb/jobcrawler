@@ -1,13 +1,37 @@
 <template name="enrolledList">
-	
+<div class="segment main_page_container">
 	<h1> Enrolled jobs</h1>
-	
-	{{#each enrolledJobs}}
-	
+	<div  class="ui two fluid cards">
+		{{#each enrolledJobs}}
+			<div class="card">
+				<div class="content center">
+					<div class="header">{{name}}</div>
+						<div class="meta">
+							<span class="left">Location </span><span class="right">{{location}}</span>
+							 	<p>Timing {{urgency}}</p>
+						</div>
+						<div class="description">
+							<h5>Job Description</h5> <article>{{description}}</article>
+						</div>		
+						<div class="meta bottom attached right floated"><a href="/jobDetails/{{_id}}">View Details</a></div>	
+				</div>
+				<div class="extra content">
+					<div class="ui top button attached">
+						<div cclass="ui negative basic button toggleisApplied"> Cancel Job </div>
+					</div>
+				</div>
+			</div>
+		{{else}}
+			<h3>You have no enrolled jobs</h3>
+		{{/each}}
+	</div>
+</div>
+</template>
 
-	
-	
-	<article class="{{#if isApplyed}} red{{/if}}">
+
+
+
+<!-- 	<article class="{{#if isApplyed}} red{{/if}}">
 		<h3>
 			{{name}}
 		</h3>
@@ -16,17 +40,15 @@
 		Categories:
 		{{#each categories}}
 			<span>{{name}}</span>,
-		{{else}}
-		<h3>You have no enrolled jobs</h3>
+		
 		{{/each}}
 		</p>
 	
 	
 		<button	class="ui negative basic button toggleisApplied"> Cancel Job </button>
 		
-	</article>
+	</article> -->
 	
+<!-- 	
+{{/each}} -->
 	
-{{/each}}
-	
-</template>

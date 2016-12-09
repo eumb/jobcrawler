@@ -1,6 +1,6 @@
 <template name="JobList">
 
-
+<div class="main_page_container">
 	
 	<div class="ui grid">
 		
@@ -41,19 +41,35 @@
 				
 				<div class="ui segment">
 					{{#if Template.subscriptionsReady}}
-							<div id ="category" class="right floated">.</div>
+							
 							<div  class="ui two fluid cards">
 								{{#each jobs}}
 								<div class="card">
 									<div class="content center">
-
 										
-										<!-- 	<span><i class="right floated large fa fa-{{category}}" aria-hidden="true"></i></span> -->
-										
-										<!-- <img class="right floated large icon icons8-Brick-Wall" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAA8UlEQVRoQ+2a0Q2DMAxEzURt9x+iZaIi1FJBIK4jLJkkj1+C4ruzfZgwSCPX0AgOAcjVlEwVeYrI/WpBZuJ5ichjuZcCeVcCYhd/Dkhp7SwEhD0HkCQFUeRLyOmUJLVIrS0DbrXVfGrV4os/Ibp0drd8Nsqt7be7V1IjAPEyvZWSKDKTQWqRWh8Gjl4o+6sRY6sPX9a3s2v0h3e0EmcHiMKAm5IowqjLqLth4JSzV9m1wi3bGEDfzu7W841sM7P/mwJRhAmRCVH/UkKNRNaIsdWHL8s6+3wIfwsPzxbAuP65ofQQ0rZFwCqABJCubtmMIhPkH5wzXJHt1AAAAABJRU5ErkJggg==" width="50" height="50"> -->
+										<!-- using raix:handlebar-helpers to get extra functionality in handlebars -->
+										<!-- we can have no 2 or more categories -->	
+										{{#if $eq categoryIs 'bathroom'}}
+											<img class="right floated large" src="https://maxcdn.icons8.com/Android_L/PNG/24/Household/shower_and_tub-24.png" title="Shower and Tub" width="25">
+										{{/if}}
 
+										{{#if $eq categoryIs 'builder'}}
+												<img class="right floated large" src="https://maxcdn.icons8.com/iOS7/PNG/25/Transport/construction_worker-25.png" title="Construction Worker" width="25">
+										{{/if}}
+									
 										
-
+										{{#if $eq categoryIs 'bricklayer'}}
+												<img class="right floated large" src="https://maxcdn.icons8.com/iOS7/PNG/25/Security/brick_wall-25.png" title="Brick Wall" width="25">
+										{{/if}}
+										
+										
+										<!-- if one category the below code will work just fine  -->
+										
+										<!-- 	<span><i clasadasss="right floated large fa fa-{{category}}" aria-hidden="true"></i></span> -->
+										
+										
+											
+										
 										<div class="header">{{name}}</div>
 										<div class="meta">
 											<span class="left">Location </span><span class="right">{{location}}</span>
@@ -88,5 +104,5 @@
 				</div>
 			</div>
 	</div>
-
+</div>
 </template>

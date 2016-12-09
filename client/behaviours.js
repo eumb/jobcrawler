@@ -1,4 +1,4 @@
-Template.myAccount.onRendered(function(){
+Template.accounts.onRendered(function(){
   $('#hybrid select').dropdown({on: 'hover'});
 });
 

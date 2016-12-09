@@ -5,6 +5,20 @@ Template.JobList.events({
 	
 });
 
+Template.JobList.helpers({
+	categoryIs: function(){
+		
+		var categ = Jobs.findOne({_id:this._id},{fields:{'category':1}}); //returns only _id adn category of all objects
+		console.log(categ.category);
+		if (categ.category === "bathroom")
+			return "bathroom"
+		if (categ.category === "builder")
+			return "builder"
+		else if (categ.category === "bricklayer")
+			return "bricklayer"
+	}
+
+});
 /*Template.JobList.helpers({
 	textValue: function() {
 		return 
