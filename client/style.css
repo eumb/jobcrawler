@@ -249,6 +249,28 @@ tests for css logo; not used*/
 	color: blue;
 }
 
+
+.ui.top.button{
+	background-color: white;
+
+}
+
+.ui.top.button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+/*///////////////////////////////////*/
+
+/*MAP*/
+.map-container {
+  width: 100%;
+  max-width: 100%;
+  height: 500px;
+}
+
 @media all and (min-width: 631px){
 	html body.pushed{
 		margin-left: 0 !important;

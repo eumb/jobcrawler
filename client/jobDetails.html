@@ -2,5 +2,14 @@
 	
 <div class="segment main_page_container">
 	<h1>{{job.name}}</h1>
+
+
+  <div class="map-container">
+    {{> googleMap name="map" options=mapOptions}}
+  </div>
+
+<!-- {{getlocation}} -->
+
+<div id ="input"></div>
 </div>
 </template>

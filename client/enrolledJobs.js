@@ -17,6 +17,7 @@ Template.enrolledList.helpers({
 
 Template.enrolledList.events({
 	'click .toggleisApplied':function(){
+		console.log("cancel job");
 		Meteor.call('toggleJobApplyedStatus',this._id,this.isApplyed)
 	}
 	
