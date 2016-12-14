@@ -1,15 +1,46 @@
 <template name="jobDetails">
 	
 <div class="segment main_page_container">
-	<h1>{{job.name}}</h1>
+	
+  <div class="ui vertically divided grid">
+    <div class="row">
+        <div class="column">
+          <h1>{{job.name}}</h1>
+        </div> 
+    </div>
 
 
-  <div class="map-container">
-    {{> googleMap name="map" options=mapOptions}}
+  
+  <div class="row">
+    <div class="six wide column">
+         
+         <div class="ui segment">
+          <h2>Location</h2>
+          <p><div id="address">{{job.location}}</div></p>
+          <h2>Description</h2>
+          <p>{{job.description}}</p>
+          <h2>Contact information</h2>
+          <p>{{job.phone}}</p>
+         </div>
+     
+         <div class="ui segment">
+              <h4>{{job.createdAt}} {{job.urgency}}</h4>
+         </div>
+         
+
+    </div>
+    <div class="ten wide column">
+ 
+      <div class="map-container" id="map_canvas">
+    
+        {{> googleMap name="map" options=mapOptions}}
+
+      </div>
+      
+    </div>
   </div>
 
-<!-- {{getlocation}} -->
 
-<div id ="input"></div>
 </div>
+</div> 
 </template>
