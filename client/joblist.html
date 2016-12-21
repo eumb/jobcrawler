@@ -7,41 +7,76 @@
 		<div class=" four wide column">
 
 			<div class="ui vertical menu">
-				  <div class="item">
-				    <div class="ui input"><input type="text" placeholder="Search..."></div>
-				  </div>
-				  <div class="item">
-				    Home
-				    <div class="menu">
-				      <a class="active item">Search</a>
-				      <a class="item">Add</a>
-				      <a class="item">Remove</a>
+				  <div id="search" class="item">
+				    <div class="ui input"><input id="searchValue" name="search" type="text" placeholder="Search..."></div>
+				
+				<!-- //meteorhacks search   -->
+			<!-- 	  <div id='search-result'>
+				    <div id="search-meta">
+				      {{#if isLoading}}
+				        searching ...
+				      {{/if}}
 				    </div>
-				  </div>
-				  <a class="item">
-				    <i class="grid layout icon"></i> Browse
-				  </a>
-				  <a class="item">
-				    Messages
-				  </a>
-				  <div class="ui dropdown item">
-				    More
-				    <i class="dropdown icon"></i>
-				    <div class="menu">
-				      <a class="item"><i class="edit icon"></i> Edit Profile</a>
-				      <a class="item"><i class="globe icon"></i> Choose Language</a>
-				      <a class="item"><i class="settings icon"></i> Account Settings</a>
-				    </div>
-				  </div>
-				</div>
+				    </div>-->
 
-		</div>
+				  </div> 
+
+				  <div class="item">
+			     	<div class="menu">
+					      <div class="item">
+					      	<div class="ui form">
+							  <div class="grouped fields">
+							    <label>Categories</label>
+							    <div class="field">
+							      <div class="ui radio checkbox">
+							        <input type="radio" name="example2" value="bathroom" checked={{checked}}>
+							        <label>Bathroom</label>
+							      </div>
+							    </div>
+							    <div class="field">
+							      <div class="ui radio checkbox">
+							        <input type="radio" name="example2" value="bricklayer" checked={{checked}}>
+							        <label>Bricklayer</label>
+							      </div>
+							    </div>
+							    <div class="field">
+							      <div class="ui radio checkbox">
+							        <input type="radio" name="example2" value="builder" checked={{checked}}>
+							        <label>Builder</label>
+							      </div>
+							    </div>
+							    <div class="field">
+							      <div class="ui radio checkbox">
+							        <input type="radio" name="example2" value="" checked="checked">
+							        <label>All</label>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+					      </div>
+					    </div>
+				  </div>
 			
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
 			<div class="twelve wide column ">
 				
 				<div class="ui segment">
 					{{#if Template.subscriptionsReady}}
-							
+					<!-- 	{{#if searching}}
+      					 {{> loading}}
+    					{{else}} -->
+    					
 							<div  class="ui two fluid cards">
 								{{#each jobs}}
 								<div class="card">
@@ -93,13 +128,14 @@
 										<span>{{createdAt}}</span>
 									</div>
 								</div>
-								{{/each}}
+							  {{/each}}
 							</div>
-					{{else}}
-						<p>Loading</p>
 					{{/if}}
+			<!-- 		{{/if}} -->
+				
 				</div>
 			</div>
 	</div>
 </div>
 </template>
+

@@ -34,10 +34,12 @@ Schemas.detailsInformation = new SimpleSchema({
 
 	name:{
 		type:String,
+		index: true,
 		label: "Give your job a name"
 	},
 	description:{
 		type: String,
+		index: true,
 		label:"Describe what you need"
 	},
 
@@ -142,5 +144,19 @@ Meteor.methods({
 	}
 });
 
+Jobs.search = function(query) {  
+  return Jobs.find({
+   isApplyed:false, name: { $regex: RegExp.escape(query), $options: 'i' }
+  }, {
+    limit: 20
+  });
+};
 
+Jobs.filter = function(query) {  
+  return Jobs.find({
+   isApplyed:false, category: { $regex: RegExp.escape(query), $options: 'i' }
+  }, {
+    limit: 20
+  });
+};
 

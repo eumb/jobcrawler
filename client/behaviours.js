@@ -2,15 +2,7 @@ Template.accounts.onRendered(function(){
   $('#hybrid select').dropdown({on: 'hover'});
 });
 
-Template.JobList.onRendered(function(){
- // $('.special.cards').dimmer({on: 'hover'});
 
- $('#category').append('<p>Loading image</p>');
-
-/*  $("#category").text("test");
-  alert($("#category").text());
-  console.log("Joblist loaded");*/
-});
 
 Template.nav.onRendered (function () {
   /*this.$('.sidebar.menu').sidebar('attach events', '.action-toggle-sidebar') */
