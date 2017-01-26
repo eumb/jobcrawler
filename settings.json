@@ -3,7 +3,13 @@
   "public":{
   	"ga":{
   		"account":"UA-81725565-1"
-  	}
+  	},
+  	
+  	
+  	"staleSessionInactivityTimeout": 180000,
+    "staleSessionHeartbeatInterval": 180000,
+    "staleSessionPurgeInterval": 60000,
+    "staleSessionActivityEvents": "mousemove click keydown"
   },
   "private":{
     "hello":"This is private"

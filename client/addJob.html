@@ -1,5 +1,5 @@
 <template name="basic">
-  {{> wizard id="basic" route="basic" steps=steps stepsTemplate="steps_semanticUI" buttonClasses="ui button" }}
+  {{> wizard id="basic" route="basic" steps=steps stepsTemplate="steps_semanticUI" buttonClasses="ui button" clearOnDestroy="true"}}
 
 </template>
 
@@ -7,12 +7,15 @@
 
 <template name="categories">
 	
-{{#autoForm id="categories-form" doc=step.data schema=step.schema}}
+{{#autoForm id="categories-form" doc=step.data schema=step.schema }}
 <div class="addJobForm">
 	<form class="ui form">
 		<div class="field">
 			<p></p>
-	    	{{> afQuickField  name='category' type='select' class='addJobFormFields'}}  	
+<!--	    	<p id="selecTrade">{{> afQuickField  placeholder= "Select a trade" name='category' type='select' class='addJobFormFields' options=categoryOptions}}</p>
+-->	    	
+
+		<p id="selecTrade">{{> afQuickField  placeholder= "Select a trade" name='category' type='select' class='addJobFormFields' options=categoryOptions.value}}</p>
 		</div>
 	</form>
 	<div class="spacing"></div>
@@ -28,13 +31,14 @@
  <!--  {{> quickform id="details-form" doc=step.data schema=step.schema}} -->
 
 
-  {{#autoForm id="details-form" doc=step.data schema=step.schema}}
+  {{#autoForm id="details-form" doc=step.data schema=step.schema resetOnSuccess=true }}
 	<fieldset class="addJobForm">
 	    <form class="ui form">
-		    <legend>Add a Job</legend>
+		 <!--   <legend>Add a Job</legend>-->
 		    <div class="field">
 		    	<p></p>
-		     	 {{> afQuickField name='name' placeholder='"e.g Paint a room"'}}
+		     	 {{> afQuickField name='name' placeholder='"Job name"'}}  	
+				
 		    </div>
 		    <div class="field">
 		     	<p></p>
@@ -42,7 +46,7 @@
 			</div>
 			<div class="field">
 				<p></p>
-		    	{{> afQuickField name='urgency' type='select' }}  	
+		    	{{> afQuickField name='urgency' type='select' options=urgencyOptions placeholder='"Select urgency"'}}  	
 			</div>	
 		</form>
 		 {{> wizardButtons}} 
@@ -56,7 +60,7 @@
 
 
 <template name="contactInformation">
-  {{#autoForm id="contactInformation-form" doc=step.data schema=step.schema}}
+  {{#autoForm id="contactInformation-form" doc=step.data schema=step.schema }}
 <!-- 
     {{> afQuickField name="acceptTerms"}} -->
 
@@ -72,6 +76,13 @@
  			<p></p>
  				{{> afQuickField name='phone' rows=1 placeholder='"We ask for your phone number because most tradespeople will give you a call to arrange a quote."'}}
 		     </div>
+		     
+		     <p>
+		     	Tradespeople pay for the chance to quote on your job, so we may contact you to confirm your job details.
+We don’t employ the tradespeople who use our site, so it’s your responsibility to choose and employ a tradesperson. We verify Gas Safe registration but do not check other qualifications so you should always review, these as well as their reviews, ratings and insurance before making your decision.
+If you change your mind, please take a moment to withdraw your job so that tradespeople don’t pay for work that doesn’t need doing. You can edit or remove your job by logging in to your account or by giving us a call.
+Rated People Ltd. Is not liable for the work, actions or omissions of tradesmen. By submitting your job you agree to our Homeowner User Agreement (particularly ‘Use of Service’, ‘Indemnity’, and ‘Limitation of Liability’) and Privacy Policy.
+		     </p>
 	</form>
 		 {{> wizardButtons}} 
 </fieldset>

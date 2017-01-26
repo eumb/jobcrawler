@@ -29,25 +29,25 @@
 							    <label>Categories</label>
 							    <div class="field">
 							      <div class="ui radio checkbox">
-							        <input type="radio" name="example2" value="bathroom" checked={{checked}}>
+							        <input id="filters" type="radio" name="example2" value="bathroom" checked={{checked}}>
 							        <label>Bathroom</label>
 							      </div>
 							    </div>
 							    <div class="field">
 							      <div class="ui radio checkbox">
-							        <input type="radio" name="example2" value="bricklayer" checked={{checked}}>
+							        <input id="filters" type="radio" name="example2" value="bricklayer" checked={{checked}}>
 							        <label>Bricklayer</label>
 							      </div>
 							    </div>
 							    <div class="field">
 							      <div class="ui radio checkbox">
-							        <input type="radio" name="example2" value="builder" checked={{checked}}>
+							        <input id="filters" type="radio" name="example2" value="builder" checked={{checked}}>
 							        <label>Builder</label>
 							      </div>
 							    </div>
 							    <div class="field">
 							      <div class="ui radio checkbox">
-							        <input type="radio" name="example2" value="" checked="checked">
+							        <input id="filters" type="radio" name="example2" value="^[a-z]" checked="checked">
 							        <label>All</label>
 							      </div>
 							    </div>
@@ -115,18 +115,34 @@
 											<h5>Job Description</h5> <article>{{description}}</article>
 											
 										</div>		
-										
-										<div class="meta bottom attached right floated"><a href="/jobDetails/{{_id}}">View Details</a></div>	
-										
+									
+
+									{{#if $eq userRole 'poster'}}
+										<div></div>	
+									{{else}}
+										<div class="meta bottom attached right floated"><a href="/jobDetails/{{_id}}">View Details for  {{_id}}</a></div>
+									 {{/if}}
 									</div>
+									
+									{{#if $eq userRole 'entr'}}
 									<div class="extra content">
 										
 										<div class="ui top button attached">
-											<div class="toggleisApplied">Apply job</div>
+											<div class="toggleisApplied">Apply Job</div>
 										</div>
 
 										<span>{{createdAt}}</span>
 									</div>
+
+
+									{{else}}
+									<div class="extra content">
+										<div class="ui top button attached" type="submit" onclick="location.href='/jobDetails/{{_id}}'">View Details
+										</div>
+										<span>{{createdAt}}</span>
+									</div>
+									{{/if}}
+									
 								</div>
 							  {{/each}}
 							</div>

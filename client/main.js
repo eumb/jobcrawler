@@ -10,6 +10,17 @@ Template.body.events({
 });
 
 
+//
+Template.body.rendered = function () {
+ /* $(window).on('beforeunload', function () {
+    // You can either remove the login tokens manually from localstorage like this:
+    // localStorage.removeItem(key);
+
+    // Alternatively you should be able to log out Meteor here (not tested), eg:
+    Meteor.logout();
+  });*/
+};
+
 
 Template.myAtForm.replaces("atForm");
 

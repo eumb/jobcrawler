@@ -49,11 +49,13 @@
 
                 {{#if currentUser}}
 
-                    <a class="active item" href="/logedIn">Home</a>
+                    <a class="item" href="/logedIn">Home</a>
                     <a class="item" href="/addJob">Add job</a>
+                    {{#if $eq userRole 'entr'}}
                     <a class="item" href="/enrolled">Enrolled Job list</a>
+                    {{/if}}
                     <a class="item" href="/account">My account</a>
-                    
+                    <a class="item" href="/ratereview">Rate & Review</a>
                 
 
                 {{/if}} 
@@ -64,7 +66,7 @@
                         <div class="right header item"> Hello {{userInfo}}</div>
                         <a class="item logout" href="#">Logout</a>
                         {{else}}
-                         <a class="active item" href="{{pathFor route='/'}}">The mission</a>
+                         <a class="item" href="{{pathFor route='/'}}">The mission</a>
                         <a class="item" href="{{pathFor route='/'}}">Success Stories</a>
                         <span></span>
                         <a class="item" href="{{pathFor route='signUp'}}">Register</a>

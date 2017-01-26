@@ -1,39 +1,10 @@
 BlazeLayout.setRoot('body');
 
-
-/*var options = {
-  keepHistory: 0,
-  localSearch: true,
-
-  subscriptionName: 'jobs.byIds' // Use subscription by this name
- };
-
-var fields = ['name', 'description','categories'];
-
-//search
-JobSearch = new SearchSource('joburi', fields, options);
-
-*/
 Template.JobList.onCreated(function() {
-/*  	//reactive var
-  	let template = Template.instance();
-  	template.searchQuery = new ReactiveVar();
-	  template.searching   = new ReactiveVar( false );
-	 
-	  //
-  template.autorun( () => {
-    template.subscribe( 'joburi', template.searchQuery.get(), () => {
-      setTimeout( () => {
-        template.searching.set( false );
-      }, 300 );
-    });
-  });
-*/
-
-/*  JobSearch.search('');*/
+  
   var self = this;
-  Session.set("searchValue", " ");
-  Session.set("filterValue", "")
+  Session.set("searchValue", "^[a-z]");
+  Session.set("filterValue", "^[a-z]");
   self.autorun(function() {
     self.subscribe('search');
   });
@@ -43,18 +14,11 @@ Template.JobList.onCreated(function() {
 
 Template.JobList.onRendered(function() {
 
-  Session.set("searchValue", " ");
+  /*Session.set("searchValue", " ");
   Session.set("filterValue", "")
-
+*/
 
 });
-
-/*Template.JobList.rendered=function(){
-	
-	JobSearch.search('');
-	$('#category').append('<p>Loading image</p>');
-};
-*/
 
 
 Template.JobList.events({ 
@@ -63,7 +27,7 @@ Template.JobList.events({
 /**/
 	},
 
-  "keyup #search": _.throttle(function (e) {
+  "keyup #searchValue": _.throttle(function (e) {
       e.preventDefault();
       //Session.set("filterValue", "");
       delete Session.keys['filterValue'];
@@ -72,40 +36,24 @@ Template.JobList.events({
     },200),
 
 
-   'change input': function(event) {
+   'change #filters': function(event) {
      var x = event.target.value;
       //Session.set("searchValue","");
       delete Session.keys['searchValue'];
       Session.set("filterValue", x);
       console.log(Session.get("filterValue"));
+   },
+   
+   'click #viewDetails':function(){
+   		console.log("View details");
+		FlowRouter.go('/jobDetails/{{_id}}');
+	},
 
- }
-/*	'keyup [name="search"]' ( event, template ) {
-    let value = event.target.value.trim();
 
-    if ( value !== '' && event.keyCode === 13 ) {
-      template.searchQuery.set( value );
-      template.searching.set( true );
-    }
-
-    if ( value === '' ) {
-      template.searchQuery.set( value );
-    }
-  }
-*/
-//instant search
-/*	"keyup #search-box": _.throttle(function(e) {
-    	var text = $(e.target).val().trim();
-    	JobSearch.search(text);
- 	}, 200)*/
 });
 
 
 Template.JobList.helpers({
-	
-	/*jobs: () => {
-		return Jobs.find({isApplyed:false});
-	},*/
 
   jobs: function() {
     Meteor.subscribe("filter", Session.get("filterValue"));
@@ -142,52 +90,11 @@ Template.JobList.helpers({
 		console.log(categs.category);
 		return categs;
 	},
+	userRole:function(){
+			return Meteor.user().profile.role;
+	}
 
 
-	
-/*//simplesearch
-  searching() {
-    return Template.instance().searching.get();
-  },
-  query() {
-    return Template.instance().searchQuery.get();
-  },
-  joburi() {
-    let joburi = Jobs.find();
-    if ( joburi ) {
-      return joburi;
-    }
-  }*/
-/*	
-	 getJobs: function() {
-    return JobSearch.getData({
-      transform: function(matchText, regExp) {
-        return matchText.replace(regExp, "$&")
-      },
-      sort: {isoScore: -1}
-    });
-  	},
-  	isLoading: function() {
-    return JobSearch.getStatus().loading;
-    },
-    isSearching:function(){
-      var searchText= $('#search-box').val().trim();
-      console.log(searchText);
-      return searchText;
-    }*/
 
 
 });
-
-
-
-/*Template.JobList.helpers({
-	textValue: function() {
-		return 
-    if (this.en) {
-      return this.text.tc;
-    } else if (this.tc) {
-      return this.text.tc;
-    }
-  }
-});*/
